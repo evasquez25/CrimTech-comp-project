@@ -1,0 +1,14 @@
+version: v1
+plugins:
+  - name: go
+    out: gen/go
+    opt: paths=source_relative
+  - name: go-grpc
+    out: gen/go
+    opt: paths=source_relative
+  - name: js
+    out: gen/js
+    opt: import_style=commonjs
+  - name: grpc-web
+    out: gen/js
+    opt: import_style=commonjs,mode=grpcwebtext

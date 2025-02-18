@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package counter;
+
+option go_package = "comp-project/gen/go/counter";
+
+service CounterService {
+    rpc IncrementCounter (IncrementRequest) returns (CounterResponse);
+}
+
+// Request message (empty because we only increment)
+message IncrementRequest {}
+
+// Response message (returns the new counter value)
+message CounterResponse {
+    int32 value = 1;
+}
